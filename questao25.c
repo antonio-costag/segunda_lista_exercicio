@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+/*25. Uma empresa deseja aumentar seus preços em 20%. Faça um algoritmo que leia o código e o preço de custo de
+cada produto e calcule o preço novo. Calcule também, a média dos preços com e sem aumento. Mostre o código e o
+preço novo de cada produto e, no final, as médias. A entrada de dados deve terminar quando for lido um código de
+produto negativo. (Use o comando enquanto-faça)*/
+
+int main(){
+    do{
+        
+    }while (1);
+
+    return 0;
+}
