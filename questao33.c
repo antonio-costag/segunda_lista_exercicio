@@ -1,7 +1,9 @@
+
+//Questão repetida, a 12 é o mesmo comando
+
 #include <stdio.h>
 
 int main(){
-
     for(int i = 0; i < 20; i++){
         int numero;
         printf("Digite um numero: ");
@@ -13,6 +15,5 @@ int main(){
         }
         printf("\n\n");
     }
-
     return 0;
 }
