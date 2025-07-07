@@ -11,7 +11,7 @@ int main(){
 
     float idade_18_35 = 0.0;
 
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < 1000; i++){
         printf("\nPESSOA [%d]\n\n", i + 1);
         int sexo;
         printf("Digite o Sexo; feminino[0], masculino[1]: ");
@@ -25,7 +25,7 @@ int main(){
         }
         else{
             printf("\n[ERRO] sexo invalido\n\n");
-            i--;
+            break;
         }
 
         int idade;
@@ -51,9 +51,9 @@ int main(){
         }
     }
 
-    printf("\nA média da idade do grupo é: %0.2f.\n", media_idade_grupo / 5.0);
+    printf("\nA média da idade do grupo é: %0.2f.\n", media_idade_grupo / 1000.0);
     printf("A média da altura[cm] das mulheres é: %0.2f.\n", media_altura_mulheres / (float)mulheres);
     printf("A média da idade dos homens é: %0.2f.\n", media_idade_homens / (float)homens);
-    printf("O percentual de pessoas com idade entre 18 e 35 anos é: %0.2f.", (100.0 * idade_18_35) / 5.0);
+    printf("O percentual de pessoas com idade entre 18 e 35 anos é: %0.2f.", (100.0 * idade_18_35) / 1000.0);
     return 0;
 }
