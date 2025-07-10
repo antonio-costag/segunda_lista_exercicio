@@ -8,7 +8,12 @@ int main(){
     scanf("%d", &x);
 
     for(int i = 1; i <= 20; i++){
-        double equacao = 1.0 / (pow(x, i));
+        unsigned long long potencia = 1;
+
+        for(int j = 0; j < i; j++){
+            potencia *= x;
+        }
+        double equacao = 1.0 / (double)potencia;
 
         // "^" indica que o numero da direita esta sendo elevado elevado.
         printf("1 / %d^%d = %0.15lf\n", x, i, equacao);
