@@ -25,6 +25,6 @@ int main(){
         }
     }
     //nao da o valor exato pq o valor é grande demais pra conseguir ser armazenado
-    printf("%d", produto);
+    printf("%lld", produto);
     return 0;
 }
