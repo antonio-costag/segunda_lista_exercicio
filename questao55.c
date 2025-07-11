@@ -6,6 +6,7 @@ int main(){
 
     for(int i = 0; i < 2; i++){
         printf("\nData %d\n\n", i + 1);
+
         int dia = 0;
         printf("Digite o dia: ");
         scanf("%d", &dia);
@@ -23,6 +24,54 @@ int main(){
         printf("Digite o ano: ");
         scanf("%d", &ano);
 
+        char bissexto = 'n';
+
+        if(ano % 4 == 0 && ano % 100 != 0
+        || ano % 100 == 0 && ano % 400 == 0){
+            bissexto = 's';
+        }
+
+        if(bissexto == 's'){
+            if(mes == 1 || mes == 3 || mes == 4){
+                dia_mes += 1;
+            }
+            else if(mes == 5 || mes == 6){
+                dia_mes += 2;
+            }
+            else if(mes == 7){
+                dia_mes += 3;
+            }
+            else if(mes == 8 || mes == 9){
+                dia_mes += 4;
+            }
+            else if(mes == 10 || mes == 11){
+                dia_mes += 5;
+            }
+            else if(mes == 12){
+                dia_mes += 6;
+            }
+        }
+        else{
+            if(mes == 1 || mes == 5 || mes == 6){
+                dia_mes += 1;
+            }
+            else if(mes == 2){
+                dia_mes -= 1;
+            }
+            else if(mes == 7){
+                dia_mes += 2;
+            }
+            else if(mes == 8 || mes == 9){
+                dia_mes += 3;
+            }
+            else if(mes == 10 || mes == 11){
+                dia_mes += 4;
+            }
+            else if(mes == 12){
+                dia_mes += 5;
+            }
+        }
+
         int dia_ano = 0;
 
         for(int i = 1; i <= ano - 1; i++){
@@ -32,81 +81,6 @@ int main(){
             }
             else{
                 dia_ano += 365;
-            }
-        }
-
-        char bissexto = 'n';
-
-        if(ano % 4 == 0 && ano % 100 != 0
-        || ano % 100 == 0 && ano % 400 == 0){
-            bissexto = 's';
-        }
-
-        if(bissexto == 's'){
-            if(mes == 1){
-                dia_mes += 1;
-            }
-            else if(mes == 3){
-                dia_mes += 1;
-            }
-            else if(mes == 4){
-                dia_mes += 1;
-            }
-            else if(mes == 5){
-                dia_mes += 2;
-            }
-            else if(mes == 6){
-                dia_mes += 2;
-            }
-            else if(mes == 7){
-                dia_mes += 3;
-            }
-            else if(mes == 8){
-                dia_mes += 4;
-            }
-            else if(mes == 9){
-                dia_mes += 4;
-            }
-            else if(mes == 10){
-                dia_mes += 5;
-            }
-            else if(mes == 11){
-                dia_mes += 5;
-            }
-            else if(mes == 12){
-                dia_mes += 6;
-            }
-        }
-        else{
-            if(mes == 1){
-                dia_mes += 1;
-            }
-            else if(mes == 2){
-                dia_mes -= 1;
-            }
-            else if(mes == 5){
-                dia_mes += 1;
-            }
-            else if(mes == 6){
-                dia_mes += 1;
-            }
-            else if(mes == 7){
-                dia_mes += 2;
-            }
-            else if(mes == 8){
-                dia_mes += 3;
-            }
-            else if(mes == 9){
-                dia_mes += 3;
-            }
-            else if(mes == 10){
-                dia_mes += 4;
-            }
-            else if(mes == 11){
-                dia_mes += 4;
-            }
-            else if(mes == 12){
-                dia_mes += 5;
             }
         }
 
