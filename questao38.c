@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int produto = 1;
+    unsigned long long produto = 1;
 
     for(int i = 92; i <= 1478; i++){
         int primo = 1;
